@@ -107,15 +107,34 @@
     <div class="oss-strip card shell reveal">
       <div class="oss-head">
         <h3>Open Source</h3>
-        <span class="merged-badge">22 Merged</span>
+        <span class="merged-badge">23 Merged</span>
       </div>
-      <p class="oss-desc">22 blueprints merged into <strong>kestra-io/blueprints</strong> during Hacktober 2026 (Track 02) — Kubernetes watchers, resource janitors, and automation utilities, each runtime-verified with a demo video. Four featured in Kestra's official blueprint gallery.</p>
+      <p class="oss-desc">23 blueprints merged into <strong>kestra-io/blueprints</strong> during Hacktober 2026 (Track 02) — Kubernetes watchers, resource janitors, and automation utilities, each runtime-verified with a demo video. Four featured in Kestra's official blueprint gallery.</p>
       <div class="card-links">
-        <a class="card-link" href="kestra.html">All 22 blueprints →</a>
+        <a class="card-link" href="kestra.html">All 23 blueprints →</a>
         <a class="card-link" href="https://kestra.io/blueprints/" target="_blank" rel="noopener">Blueprint gallery ↗</a>
       </div>
     </div>
     <div class="grid projects-grid">
+      <article class="card shell">
+        <div class="card-top">
+          <h3>Slip 025 — Checkout Incident Lab</h3>
+          <span class="date well mono">Nov 2026</span>
+        </div>
+        <p class="sub">Latency blind-spot lab · Observability</p>
+        <ul class="bullets">
+          <li><strong>100 checkouts per phase across baseline, incident &amp; recovery — 300 measured orders.</strong> All 100 incident orders returned HTTP 200, yet 4 island-route orders crossed 600 ms.</li>
+          <li><strong>Overall p95 was 31.4 ms — it never saw the slow orders.</strong> The four slow requests sat at positions 97–100 after sorting, so p95 stayed fast while shoppers waited.</li>
+          <li>Traced order 025 end to end: <strong>639 ms checkout, 624 ms inside shipping</strong>; recovery brought the same route to 30 ms / 14 ms once the injected 620 ms delay was removed.</li>
+          <li><strong>OpenTelemetry traces across Node.js checkout + shipping services</strong>, W3C trace context over HTTP — with a 25-second incident replay, order explorer, and a live experiment on Vercel.</li>
+        </ul>
+        <div class="tags"><span>Node.js</span><span>JavaScript</span><span>OpenTelemetry</span><span>Distributed Tracing</span><span>Docker</span><span>Vercel</span></div>
+        <div class="card-links">
+          <a class="card-link" href="https://checkout-incident-lab.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+          <a class="card-link" href="https://github.com/Faizan00parvez/checkout-incident-lab" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </article>
+
       <article class="card shell">
         <div class="card-top">
           <h3>PulseDeck</h3>
@@ -195,11 +214,11 @@
     <div class="grid skills-grid">
       <div class="card shell">
         <h3 class="mini">Languages</h3>
-        <div class="tags"><span>Python</span><span>Java</span><span>Bash / Shell</span><span>YAML</span><span>HCL</span></div>
+        <div class="tags"><span>Python</span><span>Java</span><span>JavaScript</span><span>Bash / Shell</span><span>YAML</span><span>HCL</span></div>
       </div>
       <div class="card shell">
         <h3 class="mini">Frameworks &amp; Libraries</h3>
-        <div class="tags"><span>Flask</span><span>boto3 (AWS SDK)</span><span>K8s Manifests</span><span>Helm</span><span>Prometheus</span><span>Grafana</span><span>ArgoCD</span></div>
+        <div class="tags"><span>Flask</span><span>boto3 (AWS SDK)</span><span>K8s Manifests</span><span>Helm</span><span>Prometheus</span><span>Grafana</span><span>ArgoCD</span><span>OpenTelemetry</span></div>
       </div>
       <div class="card shell">
         <h3 class="mini">Tools &amp; Platforms</h3>
