@@ -118,6 +118,24 @@
     <div class="grid projects-grid">
       <article class="card shell">
         <div class="card-top">
+          <h3>HoldPoint — Canary Rollout Lab</h3>
+          <span class="date well mono">Nov 2026</span>
+        </div>
+        <p class="sub">Canary release lab · Progressive delivery</p>
+        <ul class="bullets">
+          <li><strong>A router sends every 5th request (20%) to a candidate release.</strong> After 20 candidate responses, a 5xx rate of 10% or more aborts the rollout — anything lower promotes it.</li>
+          <li><strong>Faulty trial: candidate requests 3, 11 and 17 returned 503.</strong> The gate held at 20% traffic, then aborted at request 20 (3 of 20 failed) and sent the next 5 requests back to stable. The healthy candidate was promoted on the same workload.</li>
+          <li><strong>Recorded HTTP experiment with an interactive replay</strong> — compare the faulty and healthy runs, or step through the checkpoints to see where traffic went after each decision. Reproducible locally with <strong>node run.mjs</strong>.</li>
+        </ul>
+        <div class="tags"><span>Node.js</span><span>JavaScript</span><span>Canary Deployments</span><span>Progressive Delivery</span><span>GitHub Pages</span></div>
+        <div class="card-links">
+          <a class="card-link" href="https://faizan00parvez.github.io/holdpoint/" target="_blank" rel="noopener">Live ↗</a>
+          <a class="card-link" href="https://github.com/Faizan00parvez/holdpoint" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card shell">
+        <div class="card-top">
           <h3>Slip 025 — Checkout Incident Lab</h3>
           <span class="date well mono">Nov 2026</span>
         </div>
@@ -228,7 +246,7 @@
         <h3 class="mini">Databases</h3>
         <div class="tags"><span>MySQL</span><span>Amazon DynamoDB</span></div>
         <h3 class="mini" style="margin-top:14px">Core concepts</h3>
-        <p class="concepts">CI/CD · Cloud Architecture · Containerization &amp; Orchestration · IaC · GitOps · Observability · SRE · Distributed Systems · Incident Response · Automated Testing · Security · OOP · DSA · Agile</p>
+        <p class="concepts">CI/CD · Cloud Architecture · Containerization &amp; Orchestration · IaC · GitOps · Progressive Delivery · Observability · SRE · Distributed Systems · Incident Response · Automated Testing · Security · OOP · DSA · Agile</p>
       </div>
     </div>
   </section>
