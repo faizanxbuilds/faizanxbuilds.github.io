@@ -118,6 +118,24 @@
     <div class="grid projects-grid">
       <article class="card shell">
         <div class="card-top">
+          <h3>BackRead — Rollback Compatibility Lab</h3>
+          <span class="date well mono">Nov 2026</span>
+        </div>
+        <p class="sub">Rollback safety lab · Backward compatibility</p>
+        <ul class="bullets">
+          <li><strong>A new checkout writes an order as a nested amount; the old reader looks for a flat integer price.</strong> The replace contract fails the rollback read — exit 1, expected total_cents=2450, got None.</li>
+          <li><strong>The dual-write contract keeps both fields.</strong> Same order, same SQLite store: the old reader recovers all 2,450 cents and the drill exits 0.</li>
+          <li><strong>A generic three-step checker — baseline, write, rollback_read — over an isolated SQLite database per run</strong>, stdlib-only Python, 30-second step timeout, Docker Compose runner, and a self-contained replay with a downloadable checker kit. Bring your own app by swapping the three commands in a JSON contract.</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>SQLite</span><span>Docker Compose</span><span>Backward Compatibility</span><span>Rollback Safety</span><span>GitHub Actions</span></div>
+        <div class="card-links">
+          <a class="card-link" href="https://faizan00parvez.github.io/backread/" target="_blank" rel="noopener">Live ↗</a>
+          <a class="card-link" href="https://github.com/Faizan00parvez/backread" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card shell">
+        <div class="card-top">
           <h3>HoldPoint — Canary Rollout Lab</h3>
           <span class="date well mono">Nov 2026</span>
         </div>
@@ -244,9 +262,9 @@
       </div>
       <div class="card shell">
         <h3 class="mini">Databases</h3>
-        <div class="tags"><span>MySQL</span><span>Amazon DynamoDB</span></div>
+        <div class="tags"><span>MySQL</span><span>Amazon DynamoDB</span><span>SQLite</span></div>
         <h3 class="mini" style="margin-top:14px">Core concepts</h3>
-        <p class="concepts">CI/CD · Cloud Architecture · Containerization &amp; Orchestration · IaC · GitOps · Progressive Delivery · Observability · SRE · Distributed Systems · Incident Response · Automated Testing · Security · OOP · DSA · Agile</p>
+        <p class="concepts">CI/CD · Cloud Architecture · Containerization &amp; Orchestration · IaC · GitOps · Progressive Delivery · Rollback Safety · Backward Compatibility · Observability · SRE · Distributed Systems · Incident Response · Automated Testing · Security · OOP · DSA · Agile</p>
       </div>
     </div>
   </section>
