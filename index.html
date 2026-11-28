@@ -116,127 +116,110 @@
       </div>
     </div>
     <div class="grid projects-grid">
-      <article class="card shell">
-        <div class="card-top">
-          <h3>BackRead: Rollback Compatibility Lab</h3>
-          <span class="date well mono">Nov 2026</span>
+      <article class="card shell project reveal">
+        <a class="preview-tile" href="https://faizan00parvez.github.io/backread/" target="_blank" rel="noopener" aria-label="Open BackRead live site">
+          <img src="assets/previews/backread.jpg" alt="BackRead homepage: one order, two checkouts" width="1200" height="800" loading="lazy" decoding="async">
+        </a>
+        <div class="project-head">
+          <h3>BackRead</h3>
+          <span class="status"><span class="dot dot-live"></span>Live</span>
         </div>
-        <p class="sub">Rollback safety lab · Backward compatibility</p>
-        <ul class="bullets">
-          <li><strong>A new checkout writes an order as a nested amount; the old reader looks for a flat integer price.</strong> The replace contract fails the rollback read: exit 1, expected total_cents=2450, got None.</li>
-          <li><strong>The dual-write contract keeps both fields.</strong> Same order, same SQLite store: the old reader recovers all 2,450 cents and the drill exits 0.</li>
-          <li><strong>A generic three-step checker (baseline, write, rollback_read) over an isolated SQLite database per run</strong>. Stdlib-only Python, 30-second step timeout, Docker Compose runner, and a self-contained replay with a downloadable checker kit. Bring your own app by swapping the three commands in a JSON contract.</li>
-        </ul>
-        <div class="tags"><span>Python</span><span>SQLite</span><span>Docker Compose</span><span>Backward Compatibility</span><span>Rollback Safety</span><span>GitHub Actions</span></div>
+        <p class="project-one">A rollback lab that tests whether the old release can still read new data.</p>
         <div class="card-links">
           <a class="card-link" href="https://faizan00parvez.github.io/backread/" target="_blank" rel="noopener">Live ↗</a>
           <a class="card-link" href="https://github.com/Faizan00parvez/backread" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </article>
 
-      <article class="card shell">
-        <div class="card-top">
-          <h3>HoldPoint: Canary Rollout Lab</h3>
-          <span class="date well mono">Nov 2026</span>
+      <article class="card shell project reveal">
+        <a class="preview-tile" href="https://faizan00parvez.github.io/holdpoint/" target="_blank" rel="noopener" aria-label="Open HoldPoint live site">
+          <img src="assets/previews/holdpoint.jpg" alt="HoldPoint homepage: should this release go live?" width="1200" height="800" loading="lazy" decoding="async">
+        </a>
+        <div class="project-head">
+          <h3>HoldPoint</h3>
+          <span class="status"><span class="dot dot-live"></span>Live</span>
         </div>
-        <p class="sub">Canary release lab · Progressive delivery</p>
-        <ul class="bullets">
-          <li><strong>A router sends every 5th request (20%) to a candidate release.</strong> After 20 candidate responses, a 5xx rate of 10% or more aborts the rollout. Anything lower promotes it.</li>
-          <li><strong>Faulty trial: candidate requests 3, 11 and 17 returned 503.</strong> The gate held at 20% traffic, then aborted at request 20 (3 of 20 failed) and sent the next 5 requests back to stable. The healthy candidate was promoted on the same workload.</li>
-          <li><strong>Recorded HTTP experiment with an interactive replay</strong>. Compare the faulty and healthy runs, or step through the checkpoints to see where traffic went after each decision. Reproducible locally with <strong>node run.mjs</strong>.</li>
-        </ul>
-        <div class="tags"><span>Node.js</span><span>JavaScript</span><span>Canary Deployments</span><span>Progressive Delivery</span><span>GitHub Pages</span></div>
+        <p class="project-one">A canary lab. Every 5th request tries the candidate, and 10% failures abort it.</p>
         <div class="card-links">
           <a class="card-link" href="https://faizan00parvez.github.io/holdpoint/" target="_blank" rel="noopener">Live ↗</a>
           <a class="card-link" href="https://github.com/Faizan00parvez/holdpoint" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </article>
 
-      <article class="card shell">
-        <div class="card-top">
-          <h3>Slip 025: Checkout Incident Lab</h3>
-          <span class="date well mono">Nov 2026</span>
+      <article class="card shell project reveal">
+        <a class="preview-tile" href="https://checkout-incident-lab.vercel.app/" target="_blank" rel="noopener" aria-label="Open Slip 025 live site">
+          <img src="assets/previews/slip025.jpg" alt="Slip 025 homepage: find the slow checkout" width="1200" height="800" loading="lazy" decoding="async">
+        </a>
+        <div class="project-head">
+          <h3>Slip 025</h3>
+          <span class="status"><span class="dot dot-live"></span>Live</span>
         </div>
-        <p class="sub">Latency blind-spot lab · Observability</p>
-        <ul class="bullets">
-          <li><strong>100 checkouts per phase across baseline, incident and recovery: 300 measured orders.</strong> All 100 incident orders returned HTTP 200, yet 4 island-route orders crossed 600 ms.</li>
-          <li><strong>Overall p95 was 31.4 ms. It never saw the slow orders.</strong> The four slow requests sat at positions 97–100 after sorting, so p95 stayed fast while shoppers waited.</li>
-          <li>Traced order 025 end to end: <strong>639 ms checkout, 624 ms inside shipping</strong>; recovery brought the same route to 30 ms / 14 ms once the injected 620 ms delay was removed.</li>
-          <li><strong>OpenTelemetry traces across Node.js checkout + shipping services</strong>, W3C trace context over HTTP, with a 25-second incident replay, order explorer, and a live experiment on Vercel.</li>
-        </ul>
-        <div class="tags"><span>Node.js</span><span>JavaScript</span><span>OpenTelemetry</span><span>Distributed Tracing</span><span>Docker</span><span>Vercel</span></div>
+        <p class="project-one">A latency lab. 300 orders all returned 200, yet 4 slow ones hid from p95.</p>
         <div class="card-links">
           <a class="card-link" href="https://checkout-incident-lab.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
           <a class="card-link" href="https://github.com/Faizan00parvez/checkout-incident-lab" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </article>
 
-      <article class="card shell">
-        <div class="card-top">
+      <article class="card shell project reveal">
+        <a class="preview-tile" href="https://faizanxbuilds-status.vercel.app/" target="_blank" rel="noopener" aria-label="Open PulseDeck live site">
+          <img src="assets/previews/pulsedeck.jpg" alt="PulseDeck dashboard: all systems operational" width="1200" height="800" loading="lazy" decoding="async">
+        </a>
+        <div class="project-head">
           <h3>PulseDeck</h3>
-          <span class="date well mono">Sep 2026 – Present</span>
+          <span class="status"><span class="dot dot-live"></span>Live</span>
         </div>
-        <p class="sub">Public uptime &amp; status dashboard · Live SRE</p>
-        <ul class="bullets">
-          <li><strong>GitHub Actions schedules checks of 5 production services every 30 min</strong>. Results are versioned in a git data branch.</li>
-          <li><strong>Auto-filed GitHub issues on incidents</strong> with alert state, auto-closed on recovery. Incident response as code.</li>
-          <li>Next.js dashboard + <strong>JSON API</strong> serving live status; CI lint/build gate on every PR.</li>
-          <li>Deployed on Vercel, checking live sites around the clock.</li>
-        </ul>
-        <div class="tags"><span>GitHub Actions</span><span>Python</span><span>Next.js</span><span>SRE</span><span>Incident Response</span><span>YAML</span></div>
+        <p class="project-one">A live status page. Checks 5 services every 30 minutes and files incidents itself.</p>
         <div class="card-links">
           <a class="card-link" href="https://faizanxbuilds-status.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
           <a class="card-link" href="https://github.com/Faizan00parvez/pulsedeck" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </article>
 
-      <article class="card shell">
-        <div class="card-top">
+      <article class="card shell project reveal">
+        <a class="preview-tile" href="https://faizanxbuilds.github.io/DeployWatch/" target="_blank" rel="noopener" aria-label="Open DeployWatch live site">
+          <img src="assets/previews/deploywatch.jpg" alt="ArgoCD showing the DeployWatch app healthy and synced" width="1200" height="800" loading="lazy" decoding="async">
+        </a>
+        <div class="project-head">
           <h3>DeployWatch</h3>
-          <span class="date well mono">May 2026 – Present</span>
+          <span class="status"><span class="dot dot-live"></span>Live</span>
         </div>
-        <p class="sub">GitOps deployment pipeline · Developer</p>
-        <ul class="bullets">
-          <li>Automated GitOps pipeline with <strong>ArgoCD + Helm on Kubernetes</strong>. Deploys go out on their own, with automatic rollback and self-healing if they fail.</li>
-          <li>CI/CD with <strong>GitHub Actions</strong> for testing, container builds &amp; versioned deploys (Jenkins / GitLab-style principles).</li>
-          <li>Observability via <strong>kube-prometheus-stack, Prometheus, Grafana</strong>: live metrics and dashboards.</li>
-          <li>Multi-stage Dockerfile for the Flask app, <strong>HPA autoscaling</strong>, and liveness/readiness probes, so deploys do not take the app down.</li>
-        </ul>
-        <div class="tags"><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>ArgoCD</span><span>GitHub Actions</span><span>Flask</span><span>Prometheus</span><span>Grafana</span></div>
+        <p class="project-one">A GitOps pipeline. ArgoCD and Helm deploy on their own, with automatic rollback.</p>
         <div class="card-links">
           <a class="card-link" href="https://faizanxbuilds.github.io/DeployWatch/" target="_blank" rel="noopener">Live ↗</a>
           <a class="card-link" href="https://github.com/faizanxbuilds/DeployWatch" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </article>
 
-      <article class="card shell">
-        <div class="card-top">
+      <article class="card shell project reveal">
+        <a class="preview-tile" href="https://github.com/Faizan00parvez/cloudforge-aws-infra" target="_blank" rel="noopener" aria-label="Open CloudForge on GitHub">
+          <img src="assets/previews/cloudforge.jpg" alt="CloudWatch dashboard for the CloudForge AWS infrastructure" width="1200" height="800" loading="lazy" decoding="async">
+        </a>
+        <div class="project-head">
           <h3>CloudForge</h3>
-          <span class="date well mono">Apr 2026 – May 2026</span>
+          <span class="status"><span class="dot dot-code"></span>GitHub</span>
         </div>
-        <p class="sub">AWS infrastructure automation · Developer</p>
-        <ul class="bullets">
-          <li>AWS infra in <strong>Terraform across 4 modules</strong> (networking, compute, storage, monitoring), with encryption and locked-down access.</li>
-          <li><strong>S3 remote state + DynamoDB locking</strong>, so there is no local-state risk and concurrent deploys stay safe.</li>
-          <li>Custom VPC + multi-AZ public subnets, EC2 with IAM roles, encrypted EBS, AES-256 S3 with public-access blocking.</li>
-          <li><strong>CloudWatch alarms + SNS email alerts</strong> for CPU &amp; instance health, with a live dashboard.</li>
-        </ul>
-        <div class="tags"><span>Terraform</span><span>HCL</span><span>Bash</span><span>AWS</span><span>Docker</span><span>Flask</span></div>
-        <a class="card-link" href="https://github.com/Faizan00parvez/cloudforge-aws-infra" target="_blank" rel="noopener">GitHub ↗</a>
+        <p class="project-one">AWS infra in Terraform, 4 modules. Encrypted, locked down, state in S3.</p>
+        <div class="card-links">
+          <a class="card-link" href="https://github.com/Faizan00parvez/cloudforge-aws-infra" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
       </article>
 
-      <article class="card shell">
-        <div class="card-top">
-          <h3>Cloud Resource Allocation Simulator</h3>
-          <span class="date well mono">May 2025 – Nov 2025</span>
+      <article class="card shell project reveal">
+        <div class="preview-tile paper-tile" aria-hidden="true">
+          <div class="paper">
+            <p class="paper-kicker">IEEE Xplore · Accepted Feb 2026</p>
+            <p class="paper-title">Real-Time Load-Aware Resource Allocation in Cloud Systems</p>
+            <span class="paper-bar" style="width:92%"></span>
+            <span class="paper-bar" style="width:84%"></span>
+            <span class="paper-bar" style="width:64%"></span>
+          </div>
         </div>
-        <p class="sub">IEEE research publication · Associated with IEEE</p>
-        <ul class="bullets">
-          <li>Python data-engineering tool modelling <strong>real-time, load-aware allocation</strong> across cloud server clusters.</li>
-          <li>Benchmarked <strong>3 schedulers</strong> (Threshold-Based, Weighted Round Robin, Round Robin), with <strong>15–30% better</strong> load optimisation.</li>
-          <li>Tkinter visual analytics comparing algorithm performance across traffic patterns.</li>
-        </ul>
-        <div class="tags"><span>Python</span><span>Tkinter</span><span>Data Viz</span><span>Scheduling</span></div>
+        <div class="project-head">
+          <h3>Cloud Resource Allocation Simulator</h3>
+          <span class="status"><span class="dot dot-paper"></span>IEEE</span>
+        </div>
+        <p class="project-one">Peer-reviewed research on load-aware allocation, 15–30% better load optimisation.</p>
       </article>
     </div>
   </section>

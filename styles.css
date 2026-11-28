@@ -203,6 +203,51 @@ main { max-width: 1060px; margin: 0 auto; padding: 22px 16px 8px; display: flex;
 .card-link { display: inline-block; margin-top: 14px; color: var(--link); font-size: 13.5px; font-weight: 600; text-decoration: none; }
 .card-link:hover { text-decoration: underline; }
 .card-links { display: flex; gap: 18px; }
+
+/* ---------- project previews (preview tile first, one line, spring hover) ---------- */
+.project-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 16px; }
+.project-head h3 { font-size: 17px; }
+.project-one { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
+.project .card-links { margin-top: 14px; }
+.project .card-link { margin-top: 0; }
+.status {
+  display: inline-flex; align-items: center; gap: 6px; flex: none;
+  font-size: 12px; font-weight: 600; color: var(--muted);
+  background: var(--tag-bg); border: 1px solid var(--shell-border);
+  border-radius: 999px; padding: 4px 10px; white-space: nowrap;
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; }
+.dot-live { background: #58d68d; box-shadow: 0 0 6px #58d68d; }
+.dot-code { background: var(--accent); }
+.dot-paper { background: #8fb4ff; }
+.preview-tile {
+  display: block; border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--shell-border); background: var(--inset-bg);
+  padding: 20px 20px 0;
+}
+a.preview-tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.preview-tile img {
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 2;
+  object-fit: cover; object-position: top center;
+  border-radius: 10px 10px 0 0;
+  transform-origin: 50% 100%;
+  transition: transform .5s cubic-bezier(.34, 1.56, .64, 1);
+}
+/* the bounce: the preview shrinks toward its bottom edge with a spring
+   overshoot, exactly like the reference — the card itself never moves */
+.project:hover .preview-tile img { transform: scale(.94); }
+/* paper preview for the research project (no live site to screenshot) */
+.paper {
+  aspect-ratio: 3 / 2; border-radius: 10px 10px 0 0;
+  background: #f5f1e8; color: #1c1a16;
+  padding: 22px 20px 18px; display: flex; flex-direction: column;
+  transform-origin: 50% 100%;
+  transition: transform .5s cubic-bezier(.34, 1.56, .64, 1);
+}
+.project:hover .paper { transform: scale(.94); }
+.paper-kicker { margin: 0; font-size: 10.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: #8a6d1b; }
+.paper-title { margin: 10px 0 14px; font-size: 19px; font-weight: 800; line-height: 1.25; letter-spacing: -.3px; }
+.paper-bar { display: block; height: 8px; border-radius: 99px; background: #ddd5c2; margin-top: 8px; }
 .oss-strip { margin: 0 0 16px; }
 .oss-item + .oss-item { margin-top: 14px; }
 .oss-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
@@ -213,8 +258,7 @@ main { max-width: 1060px; margin: 0 auto; padding: 22px 16px 8px; display: flex;
 
 .grid { display: grid; gap: 16px; }
 .skills-grid { grid-template-columns: repeat(2, 1fr); }
-.projects-grid { grid-template-columns: 1fr 1fr; }
-.projects-grid article:last-child { grid-column: 1 / -1; }
+.projects-grid { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
 .certs-grid { grid-template-columns: 1.1fr .9fr; }
 .concepts { color: var(--muted); font-size: 13.5px; margin: 0; }
 .cert-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
