@@ -4,15 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Faizan Parvez: DevOps & Cloud Engineer</title>
-<meta name="description" content="Portfolio of Faizan Parvez — DevOps & Cloud Engineer. AWS, Terraform, Kubernetes, CI/CD, observability." />
+<meta name="description" content="Portfolio of Faizan Parvez, DevOps and Cloud Engineer. AWS, Terraform, Kubernetes, CI/CD, observability." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://faizanxbuilds.github.io/" />
-<meta property="og:title" content="Faizan Parvez — DevOps & Cloud Engineer" />
-<meta property="og:description" content="Portfolio of Faizan Parvez — DevOps & Cloud Engineer. AWS, Terraform, Kubernetes, CI/CD, GitOps, observability." />
+<meta property="og:title" content="Faizan Parvez, DevOps & Cloud Engineer" />
+<meta property="og:description" content="Portfolio of Faizan Parvez, DevOps and Cloud Engineer. AWS, Terraform, Kubernetes, CI/CD, GitOps, observability." />
 <meta property="og:image" content="https://faizanxbuilds.github.io/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Faizan Parvez — DevOps & Cloud Engineer" />
-<meta name="twitter:description" content="Portfolio of Faizan Parvez — DevOps & Cloud Engineer. AWS, Terraform, Kubernetes, CI/CD, GitOps, observability." />
+<meta name="twitter:title" content="Faizan Parvez, DevOps & Cloud Engineer" />
+<meta name="twitter:description" content="Portfolio of Faizan Parvez, DevOps and Cloud Engineer. AWS, Terraform, Kubernetes, CI/CD, GitOps, observability." />
 <meta name="twitter:image" content="https://faizanxbuilds.github.io/og-image.png" />
 <link rel="icon" type="image/png" href="assets/favicon-base.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,7 +58,7 @@
     </div>
     <h1>Faizan Parvez</h1>
     <p class="role">DevOps &amp; Cloud Engineer <span class="sep">·</span> <span class="accent">AWS · Terraform · Kubernetes · CI/CD</span></p>
-    <p class="lede">I build self-healing GitOps pipelines, production-grade AWS infrastructure as code, and observability stacks that keep systems calm. Lately: a live public status dashboard with five service probes scheduled every 30 minutes with auto-filed incident issues, zero-touch ArgoCD deployments, and multi-module Terraform on AWS.</p>
+    <p class="lede">I build GitOps pipelines, AWS infrastructure as code, and observability setups that catch problems early. Lately: a live public status page that probes five services every 30 minutes and files incident issues on its own, plus ArgoCD deployments and multi-module Terraform on AWS.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#projects">View projects</a>
       <a class="btn btn-ghost" href="mailto:faizanparvez30@gmail.com">faizanparvez30@gmail.com</a>
@@ -90,9 +90,9 @@
         <span class="date well mono">Mar 2024 – Dec 2024</span>
       </div>
       <ul class="bullets">
-        <li>Collaborated with cross-functional agile teams to design and improve integration &amp; release-quality processes across the full SDLC — contributing to secure, stable product delivery.</li>
-        <li>Designed and maintained testing dashboards and reporting systems, achieving <strong>100% on-time delivery</strong> across all project milestones.</li>
-        <li>Coordinated cross-functional testing pipelines across <strong>20+ beta users</strong> for smartphone &amp; IoT releases — identifying and triaging <strong>100+ critical bugs</strong> through structured feedback workflows.</li>
+        <li>Worked with dev, QA and product teams on integration and release quality across the release cycle.</li>
+        <li>Built and maintained testing dashboards and status reports. Hit <strong>100% on-time delivery</strong> across project milestones.</li>
+        <li>Ran testing with <strong>20+ beta users</strong> for smartphone &amp; IoT releases, and triaged <strong>100+ critical bugs</strong> from their feedback.</li>
       </ul>
       <div class="tags"><span>Agile</span><span>SDLC</span><span>Release Quality</span><span>Dashboards</span><span>Beta Programs</span></div>
     </article>
@@ -109,7 +109,7 @@
         <h3>Open Source</h3>
         <span class="merged-badge">23 Merged</span>
       </div>
-      <p class="oss-desc">23 blueprints merged into <strong>kestra-io/blueprints</strong> during Hacktober 2026 (Track 02) — Kubernetes watchers, resource janitors, and automation utilities, each runtime-verified with a demo video. Four featured in Kestra's official blueprint gallery.</p>
+      <p class="oss-desc">23 blueprints merged into <strong>kestra-io/blueprints</strong> during Hacktober 2026 (Track 02): Kubernetes watchers, resource janitors, and automation utilities. I runtime-verified each one with a demo video. Four made it into Kestra's official blueprint gallery.</p>
       <div class="card-links">
         <a class="card-link" href="kestra.html">All 23 blueprints →</a>
         <a class="card-link" href="https://kestra.io/blueprints/" target="_blank" rel="noopener">Blueprint gallery ↗</a>
@@ -118,14 +118,14 @@
     <div class="grid projects-grid">
       <article class="card shell">
         <div class="card-top">
-          <h3>BackRead — Rollback Compatibility Lab</h3>
+          <h3>BackRead: Rollback Compatibility Lab</h3>
           <span class="date well mono">Nov 2026</span>
         </div>
         <p class="sub">Rollback safety lab · Backward compatibility</p>
         <ul class="bullets">
-          <li><strong>A new checkout writes an order as a nested amount; the old reader looks for a flat integer price.</strong> The replace contract fails the rollback read — exit 1, expected total_cents=2450, got None.</li>
+          <li><strong>A new checkout writes an order as a nested amount; the old reader looks for a flat integer price.</strong> The replace contract fails the rollback read: exit 1, expected total_cents=2450, got None.</li>
           <li><strong>The dual-write contract keeps both fields.</strong> Same order, same SQLite store: the old reader recovers all 2,450 cents and the drill exits 0.</li>
-          <li><strong>A generic three-step checker — baseline, write, rollback_read — over an isolated SQLite database per run</strong>, stdlib-only Python, 30-second step timeout, Docker Compose runner, and a self-contained replay with a downloadable checker kit. Bring your own app by swapping the three commands in a JSON contract.</li>
+          <li><strong>A generic three-step checker (baseline, write, rollback_read) over an isolated SQLite database per run</strong>. Stdlib-only Python, 30-second step timeout, Docker Compose runner, and a self-contained replay with a downloadable checker kit. Bring your own app by swapping the three commands in a JSON contract.</li>
         </ul>
         <div class="tags"><span>Python</span><span>SQLite</span><span>Docker Compose</span><span>Backward Compatibility</span><span>Rollback Safety</span><span>GitHub Actions</span></div>
         <div class="card-links">
@@ -136,14 +136,14 @@
 
       <article class="card shell">
         <div class="card-top">
-          <h3>HoldPoint — Canary Rollout Lab</h3>
+          <h3>HoldPoint: Canary Rollout Lab</h3>
           <span class="date well mono">Nov 2026</span>
         </div>
         <p class="sub">Canary release lab · Progressive delivery</p>
         <ul class="bullets">
-          <li><strong>A router sends every 5th request (20%) to a candidate release.</strong> After 20 candidate responses, a 5xx rate of 10% or more aborts the rollout — anything lower promotes it.</li>
+          <li><strong>A router sends every 5th request (20%) to a candidate release.</strong> After 20 candidate responses, a 5xx rate of 10% or more aborts the rollout. Anything lower promotes it.</li>
           <li><strong>Faulty trial: candidate requests 3, 11 and 17 returned 503.</strong> The gate held at 20% traffic, then aborted at request 20 (3 of 20 failed) and sent the next 5 requests back to stable. The healthy candidate was promoted on the same workload.</li>
-          <li><strong>Recorded HTTP experiment with an interactive replay</strong> — compare the faulty and healthy runs, or step through the checkpoints to see where traffic went after each decision. Reproducible locally with <strong>node run.mjs</strong>.</li>
+          <li><strong>Recorded HTTP experiment with an interactive replay</strong>. Compare the faulty and healthy runs, or step through the checkpoints to see where traffic went after each decision. Reproducible locally with <strong>node run.mjs</strong>.</li>
         </ul>
         <div class="tags"><span>Node.js</span><span>JavaScript</span><span>Canary Deployments</span><span>Progressive Delivery</span><span>GitHub Pages</span></div>
         <div class="card-links">
@@ -154,15 +154,15 @@
 
       <article class="card shell">
         <div class="card-top">
-          <h3>Slip 025 — Checkout Incident Lab</h3>
+          <h3>Slip 025: Checkout Incident Lab</h3>
           <span class="date well mono">Nov 2026</span>
         </div>
         <p class="sub">Latency blind-spot lab · Observability</p>
         <ul class="bullets">
-          <li><strong>100 checkouts per phase across baseline, incident &amp; recovery — 300 measured orders.</strong> All 100 incident orders returned HTTP 200, yet 4 island-route orders crossed 600 ms.</li>
-          <li><strong>Overall p95 was 31.4 ms — it never saw the slow orders.</strong> The four slow requests sat at positions 97–100 after sorting, so p95 stayed fast while shoppers waited.</li>
+          <li><strong>100 checkouts per phase across baseline, incident and recovery: 300 measured orders.</strong> All 100 incident orders returned HTTP 200, yet 4 island-route orders crossed 600 ms.</li>
+          <li><strong>Overall p95 was 31.4 ms. It never saw the slow orders.</strong> The four slow requests sat at positions 97–100 after sorting, so p95 stayed fast while shoppers waited.</li>
           <li>Traced order 025 end to end: <strong>639 ms checkout, 624 ms inside shipping</strong>; recovery brought the same route to 30 ms / 14 ms once the injected 620 ms delay was removed.</li>
-          <li><strong>OpenTelemetry traces across Node.js checkout + shipping services</strong>, W3C trace context over HTTP — with a 25-second incident replay, order explorer, and a live experiment on Vercel.</li>
+          <li><strong>OpenTelemetry traces across Node.js checkout + shipping services</strong>, W3C trace context over HTTP, with a 25-second incident replay, order explorer, and a live experiment on Vercel.</li>
         </ul>
         <div class="tags"><span>Node.js</span><span>JavaScript</span><span>OpenTelemetry</span><span>Distributed Tracing</span><span>Docker</span><span>Vercel</span></div>
         <div class="card-links">
@@ -178,10 +178,10 @@
         </div>
         <p class="sub">Public uptime &amp; status dashboard · Live SRE</p>
         <ul class="bullets">
-          <li><strong>GitHub Actions schedules checks of 5 production services every 30 min</strong> — results versioned in a git data branch, fully automated.</li>
-          <li><strong>Auto-filed GitHub issues on incidents</strong> with alert state, auto-closed on recovery — incident response as code.</li>
+          <li><strong>GitHub Actions schedules checks of 5 production services every 30 min</strong>. Results are versioned in a git data branch.</li>
+          <li><strong>Auto-filed GitHub issues on incidents</strong> with alert state, auto-closed on recovery. Incident response as code.</li>
           <li>Next.js dashboard + <strong>JSON API</strong> serving live status; CI lint/build gate on every PR.</li>
-          <li>Deployed on Vercel, monitoring real-world targets around the clock.</li>
+          <li>Deployed on Vercel, checking live sites around the clock.</li>
         </ul>
         <div class="tags"><span>GitHub Actions</span><span>Python</span><span>Next.js</span><span>SRE</span><span>Incident Response</span><span>YAML</span></div>
         <div class="card-links">
@@ -197,10 +197,10 @@
         </div>
         <p class="sub">GitOps deployment pipeline · Developer</p>
         <ul class="bullets">
-          <li>Automated GitOps pipeline with <strong>ArgoCD + Helm on Kubernetes</strong> — zero-touch deployments with automatic rollback &amp; self-healing recovery.</li>
+          <li>Automated GitOps pipeline with <strong>ArgoCD + Helm on Kubernetes</strong>. Deploys go out on their own, with automatic rollback and self-healing if they fail.</li>
           <li>CI/CD with <strong>GitHub Actions</strong> for testing, container builds &amp; versioned deploys (Jenkins / GitLab-style principles).</li>
-          <li>Observability via <strong>kube-prometheus-stack, Prometheus, Grafana</strong> — real-time metrics &amp; distributed monitoring.</li>
-          <li>Multi-stage Dockerfile for Flask app, <strong>HPA autoscaling</strong>, liveness/readiness probes — zero-downtime resiliency.</li>
+          <li>Observability via <strong>kube-prometheus-stack, Prometheus, Grafana</strong>: live metrics and dashboards.</li>
+          <li>Multi-stage Dockerfile for the Flask app, <strong>HPA autoscaling</strong>, and liveness/readiness probes, so deploys do not take the app down.</li>
         </ul>
         <div class="tags"><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>ArgoCD</span><span>GitHub Actions</span><span>Flask</span><span>Prometheus</span><span>Grafana</span></div>
         <div class="card-links">
@@ -216,8 +216,8 @@
         </div>
         <p class="sub">AWS infrastructure automation · Developer</p>
         <ul class="bullets">
-          <li>Production-grade AWS infra in <strong>Terraform across 4 modules</strong> — networking, compute, storage, monitoring — with encryption &amp; access-control best practices.</li>
-          <li><strong>S3 remote state + DynamoDB locking</strong> — no local-state risk, safe concurrent deploys.</li>
+          <li>AWS infra in <strong>Terraform across 4 modules</strong> (networking, compute, storage, monitoring), with encryption and locked-down access.</li>
+          <li><strong>S3 remote state + DynamoDB locking</strong>, so there is no local-state risk and concurrent deploys stay safe.</li>
           <li>Custom VPC + multi-AZ public subnets, EC2 with IAM roles, encrypted EBS, AES-256 S3 with public-access blocking.</li>
           <li><strong>CloudWatch alarms + SNS email alerts</strong> for CPU &amp; instance health, with a live dashboard.</li>
         </ul>
@@ -233,7 +233,7 @@
         <p class="sub">IEEE research publication · Associated with IEEE</p>
         <ul class="bullets">
           <li>Python data-engineering tool modelling <strong>real-time, load-aware allocation</strong> across cloud server clusters.</li>
-          <li>Benchmarked <strong>3 schedulers</strong> (Threshold-Based, Weighted Round Robin, Round Robin) — <strong>15–30% better</strong> load optimisation.</li>
+          <li>Benchmarked <strong>3 schedulers</strong> (Threshold-Based, Weighted Round Robin, Round Robin), with <strong>15–30% better</strong> load optimisation.</li>
           <li>Tkinter visual analytics comparing algorithm performance across traffic patterns.</li>
         </ul>
         <div class="tags"><span>Python</span><span>Tkinter</span><span>Data Viz</span><span>Scheduling</span></div>
@@ -284,11 +284,11 @@
             <a href="https://www.credly.com/badges/dcd999c2-ef93-4405-88f2-8c0108ddb70d/public_url" target="_blank" rel="noopener">Verify ↗</a>
           </li>
           <li>
-            <strong>AWS Academy Graduate — Cloud Architecting</strong><span>AWS Training &amp; Certification</span>
+            <strong>AWS Academy Graduate: Cloud Architecting</strong><span>AWS Training &amp; Certification</span>
             <a href="https://www.credly.com/badges/630ed6cf-18c4-40dc-96a4-c0848406f34e/public_url" target="_blank" rel="noopener">Verify ↗</a>
           </li>
           <li>
-            <strong>AWS Academy Graduate — Microservices &amp; CI/CD Pipeline Builder</strong><span>AWS Training &amp; Certification</span>
+            <strong>AWS Academy Graduate: Microservices &amp; CI/CD Pipeline Builder</strong><span>AWS Training &amp; Certification</span>
             <a href="https://www.credly.com/badges/a558f4fc-4857-49ab-a140-5329b259ea10/public_url" target="_blank" rel="noopener">Verify ↗</a>
           </li>
         </ul>
@@ -297,7 +297,7 @@
         <h3 class="mini">Publication</h3>
         <p class="pub-title">Real-Time Load-Aware Resource Allocation in Cloud Systems</p>
         <p class="muted">IEEE Xplore · Accepted Feb 2026 (In Press)</p>
-        <p class="pub-desc">Co-authored peer-reviewed research on dynamic load-balancing efficiency — reducing response delays and optimising server utilisation.</p>
+        <p class="pub-desc">Co-authored peer-reviewed research on load-aware resource allocation in cloud systems.</p>
         <h3 class="mini" style="margin-top:16px">Also</h3>
         <p class="pub-desc">🏆 Hacktoberfest 2022 contributor (reviews, docs, bug fixes) · 🧩 100+ LeetCode problems (Arrays, Trees, DP).</p>
       </div>
@@ -325,8 +325,8 @@
   <!-- CONTACT -->
   <section id="contact" class="section reveal">
     <div class="card shell contact">
-      <h2>Let's build reliable systems.</h2>
-      <p class="muted">Fastest way to reach me is email — I usually reply within a day.</p>
+      <h2>Let's talk.</h2>
+      <p class="muted">Fastest way to reach me is email. I usually reply within a day.</p>
       <div class="hero-cta center">
         <a class="btn btn-primary" href="mailto:faizanparvez30@gmail.com">Say hello</a>
         <a class="btn btn-ghost mono" href="tel:+917004663713">+91 70046 63713</a>
@@ -337,7 +337,7 @@
 </main>
 
 <footer>
-  <span>© 2026 Faizan Parvez · Built with HTML + CSS + a whisper of skeuomorphism</span>
+  <span>© 2026 Faizan Parvez · Built with HTML and CSS</span>
   <a href="#top">Back to top ↑</a>
 </footer>
 
